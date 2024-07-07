@@ -2,14 +2,16 @@ import { IoIosSearch } from "react-icons/io";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlinePersonOutline } from "react-icons/md";
+import logo from '../../../public/assets/images/logo.png'
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () =>{
     return (
         <nav className="flex justify-between px-[64px] py-[19px] max-w-screen-xl h-full bg-[#1A1A1A]">
-            <div>
-                <span className="text-32px text-white font-bold">SNEAKERS</span>
-            </div>
+            <Link href='/' className="size-8">
+                <Image src={logo} alt="Brand Logo"/>
+            </Link>
             <div className="flex gap-x-4 text-sm font-normal text-gray-300">
                 <Link href='/' className="hover:text-white hover:font-medium hover:transition-opacity duration-700">Men</Link>
                 <Link href='/' className="hover:text-white hover:font-medium hover:transition-opacity duration-700">Women</Link>

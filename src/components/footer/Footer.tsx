@@ -4,11 +4,11 @@ const Footer = () =>{
     return(
         <section className="px-[64px] py-[24px] max-w-screen-xl h-full bg-[#1A1A1A] grid grid-cols-2">
             <div>
-                <div>
+                <div className='flex flex-col'>
                     <p className="uppercase text-white">be the first to know about new products</p>
                     <div className='flex items-center pt-3'>
                         <div className='border-gray-300 outline-none flex'>
-                            <input type="text" placeholder="your email address" className="bg-transparent outline-none border px-2.5 py-0.5 text-white rounded-tl-md rounded-bl-md" />
+                              <input type="text" placeholder="your email address" className="bg-transparent outline-none border px-2.5 py-0.5 text-white rounded-tl-md rounded-bl-md w-60" />
                             <span className='bg-gray-300 py-1 px-3 h-8 flex items-center rounded-tr-md rounded-br-md'><Image className='size-3' src={sendImg} alt='send icon'/></span>
                         </div>
                     </div>   

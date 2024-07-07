@@ -11,6 +11,7 @@ import image5 from '../../../../../public/assets/images/bestSellers/bestImg5.png
 import image6 from '../../../../../public/assets/images/bestSellers/bestImg6.png';
 import image7 from '../../../../../public/assets/images/bestSellers/bestImg7.png';
 import image8 from '../../../../../public/assets/images/bestSellers/bestImg8.png';
+
 import Image from 'next/image';
 
 const Carousel = () => {
