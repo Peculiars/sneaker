@@ -45,15 +45,15 @@ const Navbar = () => {
 
             {/* Mobile menu */}
             {isMenuOpen && (
-                <div className="absolute top-full left-0 right-0 bg-[#1A1A1A] p-4 md:hidden">
-                    <div className="flex flex-col gap-y-4 text-sm font-normal text-gray-300">
+                <div className="absolute z-50 top-16 left-0 right-0 bg-[#1A1A1A] h-full p-4 md:hidden">
+                    <div className="mt-4 flex border rounded-lg px-3 py-0.5 gap-x-3 items-center hover:border-white duration-300 hover:border-2">
+                        <IoIosSearch className="text-gray-300 hover:text-white"/>
+                        <input className="bg-transparent outline-none w-full" type="text" placeholder="Search" />
+                    </div>
+                    <div className="flex flex-col gap-y-2 mt-4 text-sm font-normal text-gray-300">
                         <Link href='/' className="navLink">Men</Link>
                         <Link href='/' className="navLink">Women</Link>
                         <Link href='/' className="navLink">Kids</Link>
-                    </div>
-                    <div className="mt-4 flex border rounded-lg px-3 py-0.5 gap-x-3 items-center hover:border-white duration-300 hover:border-2">
-                        <IoIosSearch className=""/>
-                        <input className="bg-transparent outline-none w-full" type="text" placeholder="Search" />
                     </div>
                 </div>
             )}
