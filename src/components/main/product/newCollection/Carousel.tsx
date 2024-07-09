@@ -43,10 +43,10 @@ const Carousel = () => {
             >
                 <div className="flex flex-col items-center py-6">
                     <Image src={item.image} alt={item.name} className="w-56 h-full rounded-lg" />
-                    <div className=" text-black flex flex-col py-1 w-full">
+                    <div className=" text-black flex flex-col py-1 w-full font-satoshi`">
                         <p className={`${currentSlide === item.id ? ' text-[#141414]' : 'text-[#14141480] font-medium'} text-xs`}>{item.name}</p>
-                        <p className={`${currentSlide === item.id ? ' text-[#141414]' : 'text-[#14141480]'} text-xs`}>{item.gender}</p>
-                        <p className={`${currentSlide === item.id ? ' text-[#141414]' : 'text-[#14141480]'} text-xs`}>{item.color}</p>
+                        <p className={`${currentSlide === item.id ? ' text-[#141414]' : 'text-[#14141480]'} text-[0.60rem] leading-3`}>{item.gender}</p>
+                        <p className={`${currentSlide === item.id ? ' text-[#141414]' : 'text-[#14141480]'} text-[0.60rem] leading-3`}>{item.color}</p>
                         <p className={`${currentSlide === item.id ? ' text-[#141414]' : 'text-[#14141480] font-medium'} text-xs`}>{item.price}</p>
                     </div>
                 </div>

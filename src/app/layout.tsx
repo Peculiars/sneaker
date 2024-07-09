@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Archivo, } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/header/Navbar";
 import Footer from "@/components/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const archivo = Archivo({subsets:["latin"], weight: ["200", "400", "500", "700"], variable: "--font-achivo"})
 
 export const metadata: Metadata = {
   title: "Sneakers",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${archivo.className}`}>
         <Navbar/>
         {children}
         <Footer/>

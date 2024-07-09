@@ -68,7 +68,7 @@ const Carousel = () => {
     return (
         <div className="py-[19px] max-w-screen-xl h-full mx-auto overflow-hidden">
             <div className='px-[64px] max-w-screen-xl h-full flex justify-between w-full'>
-                <h2 className="uppercase font-semibold text-2xl">best sellers</h2>
+                <h2 className="uppercase font-[700] font-archivo text-[24px] text-[#2E2E2E]">best sellers</h2>
                 <div className='flex gap-3'>
                     <button onClick={slideToPrevItem} className="">
                         <BsArrowLeftCircle className='size-6'/>

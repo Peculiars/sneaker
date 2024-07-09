@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        satoshi : ['Satoshi', 'sans-serif'],
+        archivo: "var(--font-archivo)"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -53,11 +57,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
+      // 
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

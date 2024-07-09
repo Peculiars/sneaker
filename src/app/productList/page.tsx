@@ -1,40 +1,22 @@
-import image1 from '../../../public/assets/images/newCollection/image 1.png'
-import image2 from '../../../public/assets/images/newCollection/image2.png';
-import image3 from '../../../public/assets/images/newCollection/image3.png';
-import image4 from '../../../public/assets/images/newCollection/image4.png';
-import image5 from '../../../public/assets/images/newCollection/image5.png';
-
-import image6 from '../../../public/assets/images/bestSellers/bestImg1.png';
-import image7 from '../../../public/assets/images/bestSellers/bestImg2.png';
-import image8 from '../../../public/assets/images/bestSellers/bestImg3.png';
-import image9 from '../../../public/assets/images/bestSellers/bestImg4.png';
-import image10 from '../../../public/assets/images/bestSellers/bestImg5.png';
-import image11 from '../../../public/assets/images/bestSellers/bestImg6.png';
-import image12 from '../../../public/assets/images/bestSellers/bestImg7.png';
-import image13 from '../../../public/assets/images/bestSellers/bestImg8.png';
-
 import multicolor from '../../../public/assets/images/multicolor.png'
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosClose } from "react-icons/io";
 import { FaCircle } from "react-icons/fa";
 import Image from 'next/image';
+import Link from 'next/link';
+import { shoeData } from '../../app/api/productData'
+
+
 const ProductListing = () =>{
 
-    const productData = [
-        {id: 'item-1', name: 'Zephyr Swiftstrike Pro', image: image1, category: 'Men’s Shoes', color: '1 colour', price: '₦ 140,540'},
-        { id: 'item-2', name: 'Novaweave Phantom Pulse', image: image2, category: 'Men’s Shoes', color: '3 colours', price: '₦ 100,540'},
-        {id: 'item-3', name: 'Atlas Ascent GTX', image: image3, category: 'Women’s Shoes', color: '4 colours', price: '₦ 260,000'},
-        {id: 'item-4', name: 'Hyperflight Terraform X', image: image4, category: 'Kid’s Shoes', color: '4 colours', price: '₦ 60,000'},
-        {id: 'item-5', name: 'Eclipse Shadowstrike SE', image: image5, category: 'Kid’s Shoes', color: '3 colours', price: '₦ 90,000'},
-        {id: 'item-6', name: 'Surge Conduit Bioflex', image: image6, category: 'Men’s Shoes', color: '1 colour', price: '₦ 40,540'},
-        { id: 'item-7', name: 'Legacy Cipher Codebreaker', image: image7, category: 'Men’s Shoes', color: '1 colour', price: '₦ 40,540'},
-        {id: 'item-8', name: 'Apex Terrain Conqueror', image: image8, category: 'Women’s Shoes', color: '1 colour', price: '₦ 40,540'},
-        {id: 'item-9', name: 'Novaflash Pulseweave', image: image9, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-        {id: 'item-10', name: 'Hypershift Chasers', image: image10, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-        {id: 'item-11', name: 'Radiant Propulsion Labs', image: image11, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-        {id: 'item-12', name: 'Spectral Shift Navigators', image: image12, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-        {id: 'item-13', name: 'Biometric Agility Trainers', image: image13, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-    ];
+    function formatPrice(price: number): string {
+        return new Intl.NumberFormat('en-NG', {
+          style: 'currency',
+          currency: 'NGN',
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        }).format(price);
+      }
     return(
         <main className='px-[64px] py-[19px] max-w-screen-xl h-full '>
             <div className='flex gap-4'>
@@ -147,20 +129,23 @@ const ProductListing = () =>{
             
 
             <div className='grid grid-cols-3 gap-5'>
-                {productData.map((item)=>(
-                    <div className='py-3' key={item.id}>
-                        <div className='w-[23rem]'>
-                            <Image className='rounded-md' src={item.image} alt={item.name}/>
-                        </div>  
+                {shoeData.map((item)=>(
+                    <div key={item.id} className='py-3'>
+                        <Link href={`/productList/${item.id}`} className=''>
+                            <Image className='rounded-md !w-[23rem] !h-[25rem]' width={100} height={50} src={item.variants[0].mainImage} alt={item.name}/>
+                        </Link>  
                         <div>
-                            <p>{item.name}</p>
+                            <Link href={`/productList/${item.id}`}><p>{item.name}</p></Link>
                             <p>{item.category}</p>
-                            <p>{item.color}</p>
-                            <p>{item.price}</p>
+                            <p>{item.variants[0].color}</p>
+                            <p>{formatPrice(item.price / 1)}</p>
                         </div>    
                     </div>
                 ))}
             </div>
+            <Link href='/' className='mx-auto w-full border-2 border-black rounded-full px-6 py-1'>
+                Load more
+                </Link>
         </main>
     )
 }
