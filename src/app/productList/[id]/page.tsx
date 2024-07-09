@@ -8,6 +8,8 @@ import Link from 'next/link';
 import { CiHeart } from "react-icons/ci";
 import { FiMinus } from "react-icons/fi";
 import { BsPlus } from "react-icons/bs";
+import { IoStarOutline } from "react-icons/io5";
+import { IoStar } from "react-icons/io5";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion"
 
 const ProductDetail = () => {
@@ -35,8 +37,8 @@ const ProductDetail = () => {
   return (
     <div className="px-[64px] py-[19px] max-w-screen-xl h-full">
       <div className='flex'>
-        <p>{shoe.category} / </p>
-        <p className="">{shoe.name}</p>
+        <p>{shoe.category}&nbsp;/&nbsp;</p>
+        <p>{shoe.name}</p>
       </div>
       {/* <p className="font-semibold">${(shoe.price / 100).toFixed(2)}</p> */}
       
@@ -65,7 +67,7 @@ const ProductDetail = () => {
               <p>{shoe.category}</p>
               <p>{formatPrice(shoe.price/1)}</p>
               <p className='flex gap-1'>Colors: <span>{shoe.variants.map((variant) => (
-                  <button key={variant.color} className={`w-2.5 h-2.5 mx-0.5 rounded-full ${selectedVariant?.color === variant.color ? '' : ''}`}style={{ backgroundColor: variant.color }} onClick={() => setSelectedVariant(variant)}/>))} </span></p>
+                  <button key={variant.color} className={`w-2.5 h-2.5 mx-0.5 rounded-full ${selectedVariant?.color === variant.color ? 'text-justify' : 'text-justify'}`}style={{ backgroundColor: variant.color }} onClick={() => setSelectedVariant(variant)}/>))} </span></p>
               <div>
                 <p>Size :</p>
               </div>
@@ -98,10 +100,38 @@ const ProductDetail = () => {
 
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger className='underline-none'>Reviews</AccordionTrigger>
+                <AccordionTrigger className='underline-none'>Reviews(32)</AccordionTrigger>
                 <AccordionContent>
-                  <p>We're passionate about getting your fresh kicks to you fast. That's why we offer a variety of shipping options to choose from at checkout, ensuring you get your new favourites exactly when you need them.</p>
-                  <p>Didn't find your perfect fit? No worries! We understand that sometimes things don't work out as planned. Our hassle-free return policy allows you to return unworn items within 3 days for a full refund or exchange.</p>
+                  <div>
+                    <div >
+                      <div className='flex items-center gap-3'>
+                        <span className='flex'>
+                          <IoStar />
+                          <IoStar />
+                          <IoStar />
+                          <IoStar />
+                          <IoStarOutline />
+                        </span>
+                      <p className='text-[#141414CC]'>Taiwo - July, 2024</p>
+                      </div>
+                      <p className='mb-4'>These shoes are incredible! So light and breathable, it feels like I'm walking on air</p>
+                    
+                    <div>
+                    <div className='flex items-center gap-3'>
+                        <span className='flex'>
+                          <IoStar />
+                          <IoStar />
+                          <IoStar />
+                          <IoStar />
+                          <IoStarOutline />
+                        </span>
+                        <p className='text-[#141414CC]'>Taiwo - July, 2024</p>
+                      </div>
+                      <p>These shoes are incredible! So light and breathable, it feels like I'm walking on air</p> 
+                    </div>
+                    
+                    </div>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
