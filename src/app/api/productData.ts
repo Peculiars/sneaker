@@ -1,36 +1,5 @@
-// import image1 from '../../../public/assets/images/newCollection/image 1.png'
-// import image2 from '../../../public/assets/images/newCollection/image2.png';
-// import image3 from '../../../public/assets/images/newCollection/image3.png';
-// import image4 from '../../../public/assets/images/newCollection/image4.png';
-// import image5 from '../../../public/assets/images/newCollection/image5.png';
-
+import NewCollection from "@/components/main/product/newCollection/NewCollection";
 import { ShoeModel } from "../../../types";
-
-// import image6 from '../../../public/assets/images/bestSellers/bestImg1.png';
-// import image7 from '../../../public/assets/images/bestSellers/bestImg2.png';
-// import image8 from '../../../public/assets/images/bestSellers/bestImg3.png';
-// import image9 from '../../../public/assets/images/bestSellers/bestImg4.png';
-// import image10 from '../../../public/assets/images/bestSellers/bestImg5.png';
-// import image11 from '../../../public/assets/images/bestSellers/bestImg6.png';
-// import image12 from '../../../public/assets/images/bestSellers/bestImg7.png';
-// import image13 from '../../../public/assets/images/bestSellers/bestImg8.png';
-
-
-//     export const productData = [
-//         {id: '1', name: 'Zephyr Swiftstrike Pro', image: image1, category: 'Men’s Shoes', color: '1 colour', price: '₦ 140,540'},
-//         { id: '2', name: 'Novaweave Phantom Pulse', image: image2, category: 'Men’s Shoes', color: '3 colours', price: '₦ 100,540'},
-//         {id: '3', name: 'Atlas Ascent GTX', image: image3, category: 'Women’s Shoes', color: '4 colours', price: '₦ 260,000'},
-//         {id: '4', name: 'Hyperflight Terraform X', image: image4, category: 'Kid’s Shoes', color: '4 colours', price: '₦ 60,000'},
-//         {id: '5', name: 'Eclipse Shadowstrike SE', image: image5, category: 'Kid’s Shoes', color: '3 colours', price: '₦ 90,000'},
-//         {id: '6', name: 'Surge Conduit Bioflex', image: image6, category: 'Men’s Shoes', color: '1 colour', price: '₦ 40,540'},
-//         { id: '7', name: 'Legacy Cipher Codebreaker', image: image7, category: 'Men’s Shoes', color: '1 colour', price: '₦ 40,540'},
-//         {id: '8', name: 'Apex Terrain Conqueror', image: image8, category: 'Women’s Shoes', color: '1 colour', price: '₦ 40,540'},
-//         {id: '9', name: 'Novaflash Pulseweave', image: image9, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-//         {id: '10', name: 'Hypershift Chasers', image: image10, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-//         {id: '11', name: 'Radiant Propulsion Labs', image: image11, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-//         {id: '12', name: 'Spectral Shift Navigators', image: image12, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-//         {id: '13', name: 'Biometric Agility Trainers', image: image13, category: 'Kid’s Shoes', color: '1 colour', price: '₦ 40,540'},
-//     ];
 
 export const shoeData: ShoeModel[] = [
     {
@@ -38,6 +7,7 @@ export const shoeData: ShoeModel[] = [
       name: 'Zephyr Swiftstrike Pro',
       category: "Men's shoe",
       price: 140540,
+      newCollection: "New Collection",
       variants: [
         {
           color: 'green',
@@ -60,6 +30,7 @@ export const shoeData: ShoeModel[] = [
         name: 'Novaweave Phantom Pulse',
         category: "Men's shoe",
         price: 100540,
+        newCollection: "New Collection",
         variants: [
           {
             color: 'red',
@@ -107,6 +78,7 @@ export const shoeData: ShoeModel[] = [
         name: 'Atlas Ascent GTX',
         category: "Women's shoe",
         price: 260000,
+        newCollection: "New Collection",
         variants: [
           {
             color: 'yellow',
@@ -133,6 +105,7 @@ export const shoeData: ShoeModel[] = [
         name: 'Zephyr Swiftstrike Pro',
         category: "Men's shoe",
         price: 140540,
+        newCollection: "New Collection",
         variants: [
           {
             color: 'white',
@@ -157,6 +130,7 @@ export const shoeData: ShoeModel[] = [
         name: 'Novaweave Phantom Pulse',
         category: "Men's shoe",
         price: 100540,
+        newCollection: "New Collection",
         variants: [
           {
             color: 'blue',
@@ -193,6 +167,7 @@ export const shoeData: ShoeModel[] = [
         name: 'Atlas Ascent GTX',
         category: "Women's shoe",
         price: 260000,
+        bestCollection: "Best Sellers",
         variants: [
           {
             color: 'blue',
@@ -214,6 +189,7 @@ export const shoeData: ShoeModel[] = [
         name: 'Zephyr Swiftstrike Pro',
         category: "Women's shoe",
         price: 140540,
+        bestCollection: "Best Sellers",
         variants: [
           {
             color: 'black',
@@ -248,6 +224,7 @@ export const shoeData: ShoeModel[] = [
         name: 'Novaweave Phantom Pulse',
         category: "Women's shoe",
         price: 100540,
+        bestCollection: "Best Sellers",
         variants: [
           {
             color: 'pink',
@@ -270,6 +247,7 @@ export const shoeData: ShoeModel[] = [
         name: 'Atlas Ascent GTX',
         category: "Women's shoe",
         price: 260000,
+        bestCollection: "Best Sellers",
         variants: [
           {
             color: 'white',

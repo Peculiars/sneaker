@@ -2,7 +2,7 @@ import Carousel from './Carousel'
 
 const NewCollection = () =>{
     return(
-        <section className="px-[64px] py-[19px] max-w-screen-xl h-full">
+        <section className="sm:px-[24px] md:px-[64px] py-[19px] max-w-screen-xl h-full">
             <div className="flex flex-col items-center justify-center">
                 <h2 className="uppercase text-center text-[24px] font-archivo font-[700] text-[#2E2E2E]">new collection</h2>
                 <Carousel/>

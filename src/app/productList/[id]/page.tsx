@@ -72,7 +72,7 @@ const ProductDetail = () => {
                 <p>Size :</p>
               </div>
               <div>
-                <p className='flex items-center gap-2'>Quantity :<FiMinus /> 1 <BsPlus /></p>
+                <p className='flex items-center gap-2'>Quantity :<FiMinus className='rounded-full border border-black'/> 1 <BsPlus className='rounded-full border border-black'/></p>
               </div>
               <div className='my-5 max-w-screen-xl flex gap-4 items-center'>
                 <button className='bg-black rounded-[2rem] w-[100%] px-8 py-1 my-4 text-white'>Add to Bag</button>
