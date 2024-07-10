@@ -41,9 +41,9 @@ const Carousel = () => {
             renderItem: (
                 <div
                 key={item.id} // Ensure each item has a unique key
-                className={`grid aspect-[2] w-full place-items-center text-lg text-white transition-all duration-700`}
+                className={`grid aspect-[2] w-full xs:place-items-start md:place-items-center text-lg text-white transition-all duration-700`}
             >
-                <div className="flex flex-col items-center py-6">
+                <div className="flex flex-col items-center xs:py-0 md:py-6">
                     <Link href={`/productList/${item.id}`}>
                         <Image src={item.variants[0].mainImage} alt={item.name} width={80} height={80} className=" xs:w-40 md:w-56 h-full rounded-lg" />
                     </Link>
@@ -68,9 +68,9 @@ const Carousel = () => {
     });
 
     return (
-        <div className="py-[19px] max-w-screen-xl h-full mx-auto overflow-hidden">
+        <div>
             <div className='xs:px-[12px] md:px-[64px] max-w-screen-xl h-full flex justify-between w-full'>
-                <h2 className="uppercase font-[700] font-archivo text-[24px] text-[#2E2E2E]">best sellers</h2>
+            <h2 className="uppercase font-[700] font-archivo text-[24px] text-[#2E2E2E] xs:text-center md:text-left xs:w-full">best sellers</h2>
                 <div className='xs:hidden md:flex gap-3'>
                     <button onClick={slideToPrevItem} className="">
                         <BsArrowLeftCircle className='size-6'/>
