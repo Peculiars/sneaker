@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { useSpringCarousel } from 'react-spring-carousel';
@@ -11,6 +11,20 @@ import Link from 'next/link';
 const Carousel = () => {
 
     const [currentSlide, setCurrentSlide] = useState(shoeData[0].id);
+    const [itemsPerSlide, setItemsPerSlide] = useState(3);
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            const smallScreen = window.innerWidth < 640;
+            setItemsPerSlide(smallScreen ? 2 : 5);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const {
         carouselFragment,
@@ -18,7 +32,7 @@ const Carousel = () => {
         slideToNextItem,
         useListenToCustomEvent
     } = useSpringCarousel({
-        itemsPerSlide: 5,
+        itemsPerSlide: itemsPerSlide,
         withLoop: true,
         initialStartingPosition: 'center',
         gutter: 8,
@@ -55,9 +69,9 @@ const Carousel = () => {
 
     return (
         <div className="py-[19px] max-w-screen-xl h-full mx-auto overflow-hidden">
-            <div className='px-[64px] max-w-screen-xl h-full flex justify-between w-full'>
+            <div className='xs:px-[12px] md:px-[64px] max-w-screen-xl h-full flex justify-between w-full'>
                 <h2 className="uppercase font-[700] font-archivo text-[24px] text-[#2E2E2E]">best sellers</h2>
-                <div className='flex gap-3'>
+                <div className='xs:hidden md:flex gap-3'>
                     <button onClick={slideToPrevItem} className="">
                         <BsArrowLeftCircle className='size-6'/>
                     </button>
