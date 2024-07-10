@@ -45,7 +45,7 @@ const Carousel = () => {
             >
                 <div className="flex flex-col items-center py-6">
                     <Link href={`/productList/${item.id}`}>
-                        <Image src={item.variants[0].mainImage} alt={item.name} width={80} height={80} className="w-56 h-full rounded-lg" />
+                        <Image src={item.variants[0].mainImage} alt={item.name} width={80} height={80} className=" xs:w-40 md:w-56 h-full rounded-lg" />
                     </Link>
                     <div className=" text-black flex flex-col py-1 w-full">
                         <Link href={`/productList/${item.id}`}>
@@ -81,7 +81,7 @@ const Carousel = () => {
                 </div>
             </div>
             
-            <div className="w-full overflow-x-hidden py-[1%] ml-[64px]">
+            <div className="w-full overflow-x-hidden py-[1%] xs:mx-[12px] md:ml-[64px]">
                 {carouselFragment}
             </div>
         </div>
