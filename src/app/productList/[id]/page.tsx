@@ -49,14 +49,14 @@ const ProductDetail = () => {
       {selectedVariant && (
         <div className='grid xs:grid-cols-1 md:grid-cols-2'>
           <div className='grid xs:grid-flow-row md:grid-cols-6 h-420px'>
-            <div className='col-span-1 xs:order-2'>
-              <div className="grid xs:grid-cols-6 md:grid-rows-6 gap-2">
+            <div className='col-span-1 xs:order-2 md:order-1'>
+              <div className="grid xs:grid-cols-6 md:grid-cols-1 gap-2">
                 {selectedVariant.additionalImages.map((img, index) => (
                   <Image key={index} src={img} alt={`${shoe.name} in ${selectedVariant.color} - view ${index + 1}`} width={60} height={50} className="rounded-lg"/>
                 ))}
               </div>
             </div>
-            <div className="mb-4 col-span-5 order-1">
+            <div className="mb-4 col-span-5 xs:order-1 md:order-2">
               <Image src={selectedVariant.mainImage} alt={`${shoe.name} in ${selectedVariant.color}`} width={350} height={500} className="rounded-lg"/>
             </div>
           </div>
