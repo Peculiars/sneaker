@@ -1,4 +1,3 @@
-import NewCollection from "@/components/main/product/newCollection/NewCollection";
 import { ShoeModel } from "../../../types";
 
 export const shoeData: ShoeModel[] = [
@@ -13,14 +12,13 @@ export const shoeData: ShoeModel[] = [
           color: 'green',
           mainImage: '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (1).jpeg',
           additionalImages: [
-            '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (1).jpeg',
+            '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (1).png',
             '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (2).jpeg',
-            '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (3).jpeg',
-            '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (4).jpeg'
-            // ... up to 7 images
+            '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (2).png',
+            '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (3).png',
+            '/assets/Sneaker 1/air-jordan-4-retro-oxidized-green-mens-shoes-PNtDJp (4).png',
           ]
         },
-        // Add yellow and black variants here
       ]
         },
     
@@ -40,7 +38,6 @@ export const shoeData: ShoeModel[] = [
               '/assets/Sneaker 2/Red sneaker/jumpman-mvp-mens-shoes-gzmjDz (2).png',
               '/assets/Sneaker 2/Red sneaker/jumpman-mvp-mens-shoes-gzmjDz (3).png',
               '/assets/Sneaker 2/Red sneaker/jumpman-mvp-mens-shoes-gzmjDz (4).png'
-              // ... up to 7 images
             ]
           },
 
@@ -53,7 +50,6 @@ export const shoeData: ShoeModel[] = [
               '/assets/Sneaker 2/Black sneaker/jumpman-mvp-mens-shoes-gzmjDz (3).png',
               '/assets/Sneaker 2/Black sneaker/jumpman-mvp-mens-shoes-gzmjDz (5).png',
               '/assets/Sneaker 2/Black sneaker/jumpman-mvp-mens-shoes-gzmjDz (6).png'
-              // ... up to 7 images
             ]
           },
 
@@ -66,10 +62,8 @@ export const shoeData: ShoeModel[] = [
               '/assets/Sneaker 2/Green sneaker/jumpman-mvp-mens-shoes-gzmjDz (1).jpeg',
               '/assets/Sneaker 2/Green sneaker/jumpman-mvp-mens-shoes-gzmjDz (1).png',
               '/assets/Sneaker 2/Green sneaker/jumpman-mvp-mens-shoes-gzmjDz (2).jpeg'
-              // ... up to 7 images
             ]
           },
-          // Add yellow and black variants here
         ]
       },
 
@@ -93,10 +87,8 @@ export const shoeData: ShoeModel[] = [
               '/assets/Sneaker 3/air-jordan-3-retro-tex-desert-camo-womens-shoes-FMR3S0 (4).jpeg',
               '/assets/Sneaker 3/air-jordan-3-retro-tex-desert-camo-womens-shoes-FMR3S0 (5).png',
               '/assets/Sneaker 3/air-jordan-3-retro-tex-desert-camo-womens-shoes-FMR3S0 (5).jpeg',
-              // ... up to 7 images
             ]
           },
-          // Add yellow and black variants here
         ]
       },
 
@@ -118,10 +110,8 @@ export const shoeData: ShoeModel[] = [
               '/assets/Sneaker 4/jordan-spizike-low-big-kids-shoes-XFRzcr (6).png',
               '/assets/Sneaker 4/jordan-spizike-low-big-kids-shoes-XFRzcr (7).png',
               '/assets/Sneaker 4/jordan-spizike-low-big-kids-shoes-XFRzcr.png',
-              // ... up to 7 images
             ]
           },
-          // Add yellow and black variants here
         ]
       },
 
@@ -142,7 +132,6 @@ export const shoeData: ShoeModel[] = [
               '/assets/Sneaker 5/Blue color/air-jordan-1-low-mens-shoes-0LXhbn (2).png',
               '/assets/Sneaker 5/Blue color/air-jordan-1-low-mens-shoes-0LXhbn (3).png',
               '/assets/Sneaker 5/Blue color/air-jordan-1-low-mens-shoes-0LXhbn (4).png'
-              // ... up to 7 images
             ]
           },
 
@@ -157,8 +146,6 @@ export const shoeData: ShoeModel[] = [
               '/assets/Sneaker 5/Red color/air-jordan-1-low-mens-shoes-0LXhbn (3).jpeg',
             ]
           },
-          
-          // Add yellow and black variants here
         ]
       },
 
@@ -180,7 +167,6 @@ export const shoeData: ShoeModel[] = [
               '/assets/Sneaker 6/air-jordan-legacy-312-low-little-kids-shoes-LVHB6Z (5).png'
             ]
           },
-          // Add yellow and black variants here
         ]
       },
 

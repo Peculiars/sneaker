@@ -35,7 +35,7 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="px-[64px] py-[19px] max-w-screen-xl h-full">
+    <div className="xs:px-[12px] md:px-[64px] py-[19px] max-w-screen-xl h-full">
       <div className='flex'>
         <p>{shoe.category}&nbsp;/&nbsp;</p>
         <p>{shoe.name}</p>
@@ -47,16 +47,16 @@ const ProductDetail = () => {
       </div>
 
       {selectedVariant && (
-        <div className='grid grid-cols-2'>
-          <div className='grid grid-cols-6 h-420px'>
-            <div className='col-span-1'>
-              <div className="grid grid-rows-6 gap-2">
+        <div className='grid xs:grid-cols-1 md:grid-cols-2'>
+          <div className='grid xs:grid-flow-row md:grid-cols-6 h-420px'>
+            <div className='col-span-1 xs:order-2'>
+              <div className="grid xs:grid-cols-6 md:grid-rows-6 gap-2">
                 {selectedVariant.additionalImages.map((img, index) => (
                   <Image key={index} src={img} alt={`${shoe.name} in ${selectedVariant.color} - view ${index + 1}`} width={60} height={50} className="rounded-lg"/>
                 ))}
               </div>
             </div>
-            <div className="mb-4 col-span-5">
+            <div className="mb-4 col-span-5 order-1">
               <Image src={selectedVariant.mainImage} alt={`${shoe.name} in ${selectedVariant.color}`} width={350} height={500} className="rounded-lg"/>
             </div>
           </div>
