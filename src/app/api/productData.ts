@@ -5,6 +5,7 @@ export const shoeData: ShoeModel[] = [
       id: 'shoe-1',
       name: 'Zephyr Swiftstrike Pro',
       category: "Men's shoe",
+      men: "men",
       price: 140540,
       newCollection: "New Collection",
       variants: [
@@ -27,6 +28,7 @@ export const shoeData: ShoeModel[] = [
         id: 'shoe-2',
         name: 'Novaweave Phantom Pulse',
         category: "Men's shoe",
+        men: "men",
         price: 100540,
         newCollection: "New Collection",
         variants: [
@@ -71,6 +73,7 @@ export const shoeData: ShoeModel[] = [
         id: 'shoe-3',
         name: 'Atlas Ascent GTX',
         category: "Women's shoe",
+        women: "women",
         price: 260000,
         newCollection: "New Collection",
         variants: [
@@ -96,6 +99,7 @@ export const shoeData: ShoeModel[] = [
         id: 'shoe-4',
         name: 'Zephyr Swiftstrike Pro',
         category: "Men's shoe",
+        men: "men",
         price: 140540,
         newCollection: "New Collection",
         variants: [
@@ -119,6 +123,7 @@ export const shoeData: ShoeModel[] = [
         id: 'shoe-5',
         name: 'Novaweave Phantom Pulse',
         category: "Men's shoe",
+        men: "men",
         price: 100540,
         newCollection: "New Collection",
         variants: [
@@ -153,6 +158,7 @@ export const shoeData: ShoeModel[] = [
         id: 'shoe-6',
         name: 'Atlas Ascent GTX',
         category: "Women's shoe",
+        women: "women",
         price: 260000,
         bestCollection: "Best Sellers",
         variants: [
@@ -174,6 +180,7 @@ export const shoeData: ShoeModel[] = [
         id: 'shoe-7',
         name: 'Zephyr Swiftstrike Pro',
         category: "Women's shoe",
+        women: "women",
         price: 140540,
         bestCollection: "Best Sellers",
         variants: [
@@ -209,6 +216,7 @@ export const shoeData: ShoeModel[] = [
         id: 'shoe-8',
         name: 'Novaweave Phantom Pulse',
         category: "Women's shoe",
+        kids: "kids",
         price: 100540,
         bestCollection: "Best Sellers",
         variants: [
@@ -232,6 +240,7 @@ export const shoeData: ShoeModel[] = [
         id: 'shoe-9',
         name: 'Atlas Ascent GTX',
         category: "Women's shoe",
+        kids: "kids",
         price: 260000,
         bestCollection: "Best Sellers",
         variants: [

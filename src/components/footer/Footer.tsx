@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import sendImg from '../../../public/assets/images/sendbtn.png'
 const Footer = () =>{

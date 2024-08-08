@@ -1,13 +1,11 @@
+// store/index.ts
 import { configureStore } from "@reduxjs/toolkit";
-import {createWrapper} from 'next-redux-wrapper';
-import { rootReducer } from "./reducers";
+import {rootReducer} from './reducers'; // Adjust the import path
 
-const makeStore = () => configureStore({
-    reducer: rootReducer,
+export const store = configureStore({
+  reducer: rootReducer,
 });
 
-export type AppStore = ReturnType<typeof makeStore>;
+export type AppStore = typeof store;
 export type AppState = ReturnType<AppStore['getState']>;
 export type AppDispatch = AppStore['dispatch'];
-
-export const wrapper = createWrapper<AppStore>(makeStore)

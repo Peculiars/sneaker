@@ -1,5 +1,4 @@
 "use client"
-
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -11,12 +10,25 @@ import { BsPlus } from "react-icons/bs";
 import { IoStarOutline } from "react-icons/io5";
 import { IoStar } from "react-icons/io5";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion"
+import LikelyProducts from '@/components/main/product/LikelyProducts';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrementQuantity, incrementQuantity, clearCart, removeItem } from "@/store/reducers/cartReducer";
+import { AppState } from '@/store/store';
 
 const ProductDetail = () => {
   const params = useParams();
   const id = params.id as string;
-  
-  // Find the shoe from shoeData based on id
+  const dispatch = useDispatch();
+  const productFunc = useSelector((state: AppState) => state.cart.items);
+
+  const handleIncrement = (id: number) =>{
+    dispatch(incrementQuantity(id));
+  }
+
+  const handleDecrement =(id: number)=>{
+    dispatch(decrementQuantity(id));
+  }
+
   const shoe = shoeData.find(item => item.id === id);
   
   const [selectedVariant, setSelectedVariant] = useState(shoe?.variants[0]);
@@ -66,13 +78,31 @@ const ProductDetail = () => {
               <h3>{shoe.name}</h3>
               <p>{shoe.category}</p>
               <p>{formatPrice(shoe.price/1)}</p>
-              <p className='flex gap-1'>Colors: <span>{shoe.variants.map((variant) => (
-                  <button key={variant.color} className={`w-2.5 h-2.5 mx-0.5 rounded-full ${selectedVariant?.color === variant.color ? 'text-justify' : 'text-justify'}`}style={{ backgroundColor: variant.color }} onClick={() => setSelectedVariant(variant)}/>))} </span></p>
-              <div>
+              <p className='flex gap-1'>Colors: 
+                <span>{shoe.variants.map((variant) => (
+                  <button key={variant.color} className={`w-2.5 h-2.5 mx-0.5 rounded-full border border-black shadow-sm ${selectedVariant?.color === variant.color ? 'text-justify' : 'text-justify'}`}style={{ backgroundColor: variant.color }} onClick={() => setSelectedVariant(variant)}/>))} 
+                </span>
+              </p>
+              <div className="flex items-center">
                 <p>Size :</p>
+                <div className='flex gap-2 pl-2'>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>36</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>37</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>38</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>39</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>40</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>41</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>42</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>43</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>44</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>45</button>
+                  <button className='border rounded-sm py-1 px-2 hover:border-1 hover:border-black'>46</button>
+                </div>
               </div>
               <div>
-                <p className='flex items-center gap-2'>Quantity :<FiMinus className='rounded-full border border-black'/> 1 <BsPlus className='rounded-full border border-black'/></p>
+                <p className='flex items-center gap-2'>
+                  Quantity : <button onClick={()=> handleDecrement} className='border border-1 border-black rounded-full'><FiMinus/></button> 1 <button onClick={()=>handleIncrement} className='border border-1 border-black rounded-full'><BsPlus/></button>
+                </p>
               </div>
               <div className='my-5 max-w-screen-xl flex gap-4 items-center'>
                 <button className='bg-black rounded-[2rem] w-[100%] px-8 py-1 my-4 text-white'>Add to Bag</button>
@@ -140,6 +170,7 @@ const ProductDetail = () => {
           </div>
         </div>
       )}
+      <LikelyProducts/>
     </div>
   );
 };

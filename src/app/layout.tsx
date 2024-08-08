@@ -1,9 +1,10 @@
+
 import type { Metadata } from "next";
 import { Inter, Archivo, } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/header/Navbar";
 import Footer from "@/components/footer/Footer";
-
+import ReduxProvider from "@/components/provider/Provider";
 const archivo = Archivo({subsets:["latin"], weight: ["200", "400", "500", "700"], variable: "--font-achivo"})
 
 export const metadata: Metadata = {
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${archivo.className}`}>
-        <Navbar/>
-        {children}
-        <Footer/>
+        <ReduxProvider>
+          <Navbar/>
+          {children}
+          <Footer/>
+        </ReduxProvider>
       </body>
     </html>
   );
